@@ -40,7 +40,14 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
-
+    public function showRegistrationForm()
+    {
+        abort(404, 'The page you are looking for is not present.');
+    }
+    public function register()
+    {
+        abort(400, 'This request cannot be processed.');
+    }
     /**
      * Get a validator for an incoming registration request.
      *
